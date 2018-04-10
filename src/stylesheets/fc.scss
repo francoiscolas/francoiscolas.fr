@@ -1,0 +1,93 @@
+@import '3rdparty/spectre/dist/spectre-icons';
+
+@import 'spectre-variables';
+@import 'spectre';
+
+$medium-up: (min-width: $size-md);
+$block-spacing: 21px;
+
+header {
+  background-image: url(http://www.jardindelavenir.fr/images/accuiel-panorama/cote-jardin.jpg);
+  background-size: cover;
+  height: 333px;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: $light-color;
+  text-align: center;
+  margin-bottom: $block-spacing;
+  padding: 20px;
+  @media #{$medium-up} {
+    height: 555px;
+  }
+  h1 {
+    border-bottom: 1px solid $light-color;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    @media #{$medium-up} {
+      font-size: 4em;
+      max-width: 500px;
+    }
+  }
+  p {
+    font-size: 1.5em;
+    font-variant-caps: small-caps;
+  }
+}
+main {
+  .column {
+    margin-top: $block-spacing;
+    margin-bottom: $block-spacing;
+  }
+  .location {
+    padding: 0;
+    .infos {
+      padding: $layout-spacing;
+      ul {
+        list-style: none;
+        margin: 0;
+        li.addr div { display: inline-block; vertical-align: top; }
+      }
+    }
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 444px;
+      margin-top: $block-spacing*2;
+    }
+    @media #{$medium-up} {
+      position: relative;
+      .infos {
+        background: white;
+        position: absolute;
+        top: 42px;
+        right: 42px;
+        bottom: 42px;
+        width: 300px;
+      }
+      iframe {
+        margin-top: 0; }
+    }
+  }
+  form {
+    position: relative;
+    #sent, #error {
+      display: none; }
+    #sent {
+      background: white;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      line-height: 300px;
+    }
+  }
+}
+footer {
+  background-image: url(footer.jpg);
+  background-size: cover;
+  text-align: center;
+  font-size: 0.8em;
+  height: 222px;
+  line-height: 222px;
+}

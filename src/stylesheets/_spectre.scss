@@ -1,0 +1,47 @@
+// Variables and mixins
+@import "3rdparty/spectre/src/variables";
+@import "3rdparty/spectre/src/mixins";
+
+// Reset and dependencies
+@import "3rdparty/spectre/src/normalize";
+@import "3rdparty/spectre/src/base";
+
+// Elements
+@import "3rdparty/spectre/src/typography";
+//@import "3rdparty/spectre/src/asian";
+//@import "3rdparty/spectre/src/tables";
+@import "3rdparty/spectre/src/buttons";
+@import "3rdparty/spectre/src/forms";
+//@import "3rdparty/spectre/src/labels";
+//@import "3rdparty/spectre/src/codes";
+//@import "3rdparty/spectre/src/media";
+
+// Layout
+@import "3rdparty/spectre/src/layout";
+//@import "3rdparty/spectre/src/navbar";
+
+// Components
+//@import "3rdparty/spectre/src/accordions";
+//@import "3rdparty/spectre/src/avatars";
+//@import "3rdparty/spectre/src/badges";
+//@import "3rdparty/spectre/src/breadcrumbs";
+//@import "3rdparty/spectre/src/bars";
+//@import "3rdparty/spectre/src/cards";
+//@import "3rdparty/spectre/src/chips";
+//@import "3rdparty/spectre/src/dropdowns";
+//@import "3rdparty/spectre/src/empty";
+//@import "3rdparty/spectre/src/menus";
+//@import "3rdparty/spectre/src/modals";
+//@import "3rdparty/spectre/src/navs";
+//@import "3rdparty/spectre/src/pagination";
+//@import "3rdparty/spectre/src/panels";
+//@import "3rdparty/spectre/src/popovers";
+//@import "3rdparty/spectre/src/steps";
+//@import "3rdparty/spectre/src/tabs";
+//@import "3rdparty/spectre/src/tiles";
+//@import "3rdparty/spectre/src/toasts";
+//@import "3rdparty/spectre/src/tooltips";
+
+// Utility classes
+@import "3rdparty/spectre/src/animations";
+@import "3rdparty/spectre/src/utilities";

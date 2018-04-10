@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+  <title>François Colas - Maraîcher bio</title>
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet"/>
+  <link href="fc.css" rel="stylesheet"/>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      var form = $('form').submit(function () {
+        var button = form.find('button');
+        var showError = function () {
+          $('#error').slideDown();
+          button.removeClass('loading');
+        };
+        var showSuccess = function () {
+          $('#sent').fadeIn();
+        };
+
+        $.post('sendmail.php', $(this).serialize())
+          .fail(showError)
+          .done(function (resp) {
+            (resp.sent) ? showSuccess() : showError(); })
+        button.addClass('loading');
+        return false;
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>François Colas</h1>
+    <p>Maraîcher bio</p>
+  </header>
+  <main>
+    <div class="container">
+      <div class="columns">
+        <div class="column col-sm-12 col-8 col-mx-auto">
+          <h3 class="text-center">Je me présente</h3>
+          <p class="text-justify">
+            Ça y est, depuis peu, je suis maraîcher bio. En 2016, j'ai quitté mon travail
+            pour me lancer dans cette nouvelle aventure. Après une année de formation à
+            l'<a href="http://www.groupe-esa.com/">ESA d'Angers</a>, je me lance sur ce terrain
+            test de 3000m². Cela va me permettre d'améliorer ma technique et de me donner le
+            temps de mûrir mon projet avant de m'installer pour de bon.<br/>
+            Mes récoltes ne sont pas certifiées AB (Agriculture Biologique) car je
+            ne vais pas rester assez longtemps sur ce terrain pour pouvoir bénéficier de
+            la certification. Cependant, je respecte strictement les règles de l'Agriculture
+            Biologique. N'hésitez pas à venir me rendre visite pour vous rendre compte de la
+            sincérité de ma démarche.
+          </p>
+          <p class="text-right">À bientôt. </p>
+        </div>
+        <div class="column col-sm-12 col-8 col-mx-auto text-center">
+          <h3>Quand ?</h3>
+          <p>Le jeudi matin, <mark>au marché de la Doutre</mark> (Place du Dr Bichon à Angers).</p>
+          <div class="divider" data-content="Où"></div>
+          <p>
+            <s>Vente <mark>au jardin</mark> le mercredi et samedi de 14h à 18h.</s><br/>
+            La vente au jardin commencera à partir du mois de juin.
+          </p>
+        </div>
+        <div class="column col-12 location">
+          <div class="infos">
+            <h3 class="text-center">Où ?</h3>
+            <p>Le jardin est situé à Montreuil-Juigné dans le quartier de Béné.</p>
+            <ul>
+              <li class="addr">
+                <i class="icon icon-location"></i>
+                <div>
+                  Allée Frédéric Chopin<br/>
+                  49460 Montreuil-Juigné<br/>
+                  <u>Lat</u>: 47.541722<br/><u>Lon</u>: -0.604111
+                </div>
+              </li>
+              <li>
+                <i class="icon icon-mail"></i>
+                <a href="mailto://moi@francoiscolas.fr">moi@francoiscolas.fr</a>
+              </li>
+              <li>
+                <i class="icon icon-people"></i>
+                <a href="tel://0695181422">06 95 18 14 22</a>
+              </li>
+            </ul>
+          </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1923.944288155702!2d-0.6058606530360459!3d47.54183524667306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDMyJzMwLjIiTiAwwrAzNicxNC44Ilc!5e1!3m2!1sfr!2sfr!4v1523361388881" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="column col-sm-12 col-5 col-mx-auto">
+          <h3 class="text-center">Me contacter</h3>
+          <form action="sendmail.php" method="post">
+            <p>Pour me contacter, vous pouvez utiliser mes coordonnées ci-dessus
+              ou utiliser le formulaire ci-dessous, je vous répondrai au plus vite.</p>
+            <div class="form-group">
+              <label class="form-label">Prénom NOM
+                <input name="name" class="form-input" type="text"></label>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Adresse électronique
+                <input name="email" class="form-input" type="text"></label>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Sujet
+                <input name="subject" class="form-input" type="text"></label>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message
+                <textarea name="message" class="form-input" rows="7"></textarea></label>
+            </div>
+            <div class="text-right">
+              <button type="submit" class="btn btn-primary">
+                <i class="icon icon-mail"></i> Envoyer</button>
+            </div>
+            <div id="error" class="text-error">
+              <u>Erreur</u> : Merci de vérifier les informations saisies.
+              Si le problème persiste, vous pouvez réessayer plus
+              tard ou me laisser un message téléphonique.
+            </div>
+            <div id="sent" class="text-success text-center">
+              <i class="icon icon-4x icon-check"></i>
+            </div>
+          </form>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    &copy; 2018 - <a href="mailto:francoiscolas@gmail.com">François COLAS</a> - Tous droits réservés.
+  </footer>
+</body>
+</html>
