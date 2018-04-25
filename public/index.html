@@ -12,21 +12,24 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script>
     $(function () {
-      var form = $('form').submit(function () {
+      $('form').submit(function () {
+        var form   = $(this);
         var button = form.find('button');
+        var error  = form.find('.form-error');
+
         var showError = function () {
-          $('#error').slideDown();
-          button.removeClass('loading');
+          error.slideDown();
         };
         var showSuccess = function () {
-          $('#sent').fadeIn();
+          button.attr('disabled', '');
+          button.addClass('btn-success');
+          button.html('<i class="icon icon-check"></i> Merci');
         };
 
-        $.post('sendmail.php', $(this).serialize())
+        $.post(form.attr('action'), form.serialize())
           .fail(showError)
-          .done(function (resp) {
-            (resp.sent) ? showSuccess() : showError(); })
-        button.addClass('loading');
+          .done(function (resp) { (resp.sent) ? showSuccess() : showError(); })
+        error.slideUp();
         return false;
       });
     });
@@ -64,6 +67,34 @@
             <s>Vente <mark>au jardin</mark> le mercredi et samedi de 14h à 18h.</s><br/>
             La vente au jardin commencera à partir du mois de juin.
           </p>
+        </div>
+        <div class="column col-sm-12 col-7 col-mx-auto text-center">
+          <h3>Reçevoir les infos ?</h3>
+          <form action="giveinfos.php" method="post">
+            <p>Ci-dessous, vous pouvez me laisser votre adresse email ou numéro de téléphone.
+              Au long de la saison j'enverai <u>les horaires</u> et la <u>liste des légumes</u>
+              disponibles.</p>
+            <div class="columns">
+              <div class="form-group column col-md-12">
+                <label class="form-label">Téléphone
+                  <input name="phone" class="form-input" type="text"></label>
+              </div>
+              <div class="divider-vert hide-md" data-content="Et/Ou"></div>
+              <div class="divider col-12 show-md" data-content="Et/Ou"></div>
+              <div class="form-group column col-md-12">
+                <label class="form-label">Adresse électronique
+                  <input name="email" class="form-input" type="text"></label>
+              </div>
+            </div>
+            <div class="form-error text-error">
+              <u>Erreur</u> : Merci de vérifier les informations saisies.
+              Si le problème persiste, vous pouvez réessayer plus
+              tard ou me laisser un message.
+            </div>
+            <div class="text-right">
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </div>
+          </form>
         </div>
         <div class="column col-12 location">
           <div class="infos">
@@ -111,19 +142,15 @@
               <label class="form-label">Message
                 <textarea name="message" class="form-input" rows="7"></textarea></label>
             </div>
-            <div class="text-right">
-              <button type="submit" class="btn btn-primary">
-                <i class="icon icon-mail"></i> Envoyer</button>
-            </div>
-            <div id="error" class="text-error">
+            <div class="form-error text-error">
               <u>Erreur</u> : Merci de vérifier les informations saisies.
               Si le problème persiste, vous pouvez réessayer plus
               tard ou me laisser un message téléphonique.
             </div>
-            <div id="sent" class="text-success text-center">
-              <i class="icon icon-4x icon-check"></i>
+            <div class="text-right">
+              <button type="submit" class="btn btn-primary">
+                <i class="icon icon-mail"></i> Envoyer</button>
             </div>
-          </form>
           </form>
         </div>
       </div>

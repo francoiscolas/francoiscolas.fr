@@ -38,6 +38,9 @@ main {
     margin-top: $block-spacing;
     margin-bottom: $block-spacing;
   }
+  .form-error {
+    display: none;
+  }
   .location {
     padding: 0;
     .infos {
@@ -66,20 +69,6 @@ main {
       }
       iframe {
         margin-top: 0; }
-    }
-  }
-  form {
-    position: relative;
-    #sent, #error {
-      display: none; }
-    #sent {
-      background: white;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      line-height: 300px;
     }
   }
 }
