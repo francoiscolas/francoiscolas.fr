@@ -1,3 +1,10 @@
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{SERVER_NAME}/$1 [R,L]
+
+# Restrict access to phones.json and emails.json
 <Files "phones.json">
     Order Allow,Deny
     Deny from all
