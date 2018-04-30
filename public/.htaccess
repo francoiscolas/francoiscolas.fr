@@ -4,12 +4,9 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule (.*) https://%{SERVER_NAME}/$1 [R,L]
 
-# Restrict access to phones.json and emails.json
-<Files "phones.json">
-    Order Allow,Deny
+# Restrict access to /p.php (private data access)
+<Files /p.php>
+    Order Deny,Allow
     Deny from all
-</Files>
-<Files "emails.json">
-    Order Allow,Deny
-    Deny from all
+    Allow from 78.221.215.68
 </Files>
