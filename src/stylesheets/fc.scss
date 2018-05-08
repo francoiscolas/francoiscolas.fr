@@ -7,7 +7,7 @@ $medium-up: (min-width: $size-md);
 $block-spacing: 21px;
 
 header {
-  background-image: url(header.jpg);
+  background-image: url(header0.jpg);
   background-size: cover;
   height: 333px;
   font-family: 'Gloria Hallelujah', cursive;
@@ -75,6 +75,7 @@ main {
 footer {
   background-image: url(footer.jpg);
   background-size: cover;
+  color: white;
   text-align: center;
   font-size: 0.8em;
   height: 222px;
