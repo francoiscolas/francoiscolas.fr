@@ -1,0 +1,18 @@
+{
+  "name": "francoiscolas-fr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "serve": "parcel serve src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "dependencies": {
+    "grapheme-splitter": "^1.0.4",
+    "typewriter-effect": "2.21.0"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

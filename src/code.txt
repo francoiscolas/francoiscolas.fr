@@ -1,0 +1,10 @@
+$ gcc -x c - <<EOF
+#include <unistd.h>
+
+int main()
+{
+    write(1, "Hi!\n", 4);
+    return 0;
+}
+EOF
+$ ./a.out
