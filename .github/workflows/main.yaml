@@ -25,3 +25,8 @@ jobs:
         local-dir: dist/
         server-dir: www/
         dangerous-clean-slate: true
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/exodus/**
