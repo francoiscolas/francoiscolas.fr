@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect/dist/core";
       .typeString("<strong>$</strong> ")
       .pauseFor(1000)
       .typeString("gcc -x c - &lt;&ltEOF<br/>")
-      .typeString("#include &lt;unistd.h&gt;<br/>")
+      .typeString("#include \"unistd.h\"<br/>")
       .typeString("<br/>")
       .typeString("int main()<br/>")
       .typeString("{<br/>")
