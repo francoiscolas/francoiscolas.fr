@@ -3,8 +3,8 @@ let
   pkgs = import nixpkgs { config = {}; overlays = []; };
 in
 
-pkgs.mkShell {
+pkgs.mkShellNoCC {
   packages = with pkgs; [
-    nodejs
+    bundler
   ];
 }

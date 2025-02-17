@@ -1,0 +1,68 @@
+career-profile:
+    title: Bio
+    summary: |
+      Passionné de logiciel, j'ai appris assez tôt à programmer. Pour moi, faire
+      mes études à EPITECH était génial car je pouvais enfin faire 24/7 ce que
+      je préférai !  
+        
+      Après avoir travaillé plusieurs années, j'ai fais une pause de 4 ans pour
+      travailler dans l'agriculture. Je me suis formé à l'[ESA](https://www.groupe-esa.com/)
+      puis j'ai créé une première ferme maraîchère pour finalement travailler à
+      [La Ronde des Fruits](https://larondedesfruits.fr/), ferme qu'il était prévu
+      que je reprenne.  
+        
+      Les évènements m'ont poussé à laisser ce rève de côté pour retrouver ma
+      passion première. C'est naturellement que j'ai terminé l'année à
+      l'[ESEO](https://www.eseo.fr/) où j'étais vacataire depuis quelques années.  
+      Ensuite, j'ai travaillé chez [EVOLIS](https://www.evolis.com/) où j'ai eu la
+      chance de m'occuper de la refonte du SDK de la société et d'être responsable
+      technique d'une équipe de 5 ingénieurs.
+
+experiences:
+    title:  Expériences pro<span class="is-hidden-mobile">fessionnelles</span>
+    info:
+      - role: Team Leader
+        time: Juill. 2020 à déc. 2024
+        company: EVOLIS, Beaucouzé (49)
+        details: |
+          - En charge de la mise en œuvre technique de la vision des SDKs.
+          - Mise en place `Gitlab CI/CD` pour 5 plateformes et 5 langages différents.
+          - Responsable technique de 5 ingénieurs logiciels.
+          - Gestion de projet via Jira.
+          - Contexte multiplateforme : `Windows, macOS, iOS, Linux, Android`.
+          - Langages : `C, C++, Rust, C#, Java, Bash`. 
+          - Technologies : `Yocto, Qt, CMake, GitLab CI/CD, Docker, REST API, Android NDK, Jira, VirtualBox, Nginx, ...`
+      - role: Administrateur système
+        time: Févr. 2020 à juin 2020
+        company: ESEO, Angers (49)
+        details: |
+          - Expert Linux au sein du service informatique.
+          - En charge du maintien en opération des labos.
+          - Technologies : `Ubuntu, Debian, Docker, Gitea, FOG Project, Bash, ...`
+      - role: Chargé de cours
+        time: Sept. 2017 à juin 2020
+        company: ESEO, Angers (49)
+        details: |
+          - Formation des élèves de prépa et bachelor à l’algorithmie et à la programmation informatique.
+          - Utilisation de `Python` et `Java (Android)` pour la formation.
+          - Développement de mes qualités de transmission et d’écoute.
+      - role: Responsable de cultures
+        time: Nov. 2018 à jan. 2020
+        company: Ferme "La Ronde Des Fruits", La Membrolle-sur-Longuenée (49)
+        details: |
+          - Gestion des travaux d’entretien, de récolte et de commercialisation.
+          - Gestion d’une équipe de saisonniers.
+      - role: Gérant
+        time: Juin 2016 à sept. 2017
+        company: Cestlocal.fr, Angers (49)
+        details: |
+          - Création et développement du site cestlocal.fr, projet permettant de faire le lien entre consommateurs et producteurs.
+          - Technologies : `Ruby On Rails, Foundation Framework, Backbone, Docker, Chef, Javascript, CSS`.
+      - role: Ingénieur logiciel
+        time: Févr. 2008 à juin 2016
+        company: Camtrace SAS, Suresnes (92)
+        details: |
+          - Développement fullstack : `PHP, Javascript`.
+          - Développement système : Serveur vidéo en `C` puis refonte en `C++`.
+          - Développement application bureautiques et applications mobiles.
+          - Technologies : `Qt, Boost, Cordova, Android NDK`.

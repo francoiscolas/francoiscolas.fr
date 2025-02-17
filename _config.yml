@@ -1,0 +1,16 @@
+title: "François Colas - Freelance en développement logiciel."
+email: "pro@francoiscolas.fr"
+description: >-
+  Freelance en développement logiciel. Disponible ASAP à distance ou en 
+  présentiel dans l'ouest et la région parisienne.
+url: "https://francoiscolas.fr"
+baseurl: ""
+encoding: "utf-8"
+
+sass:
+  style: compressed
+
+exclude:
+  - README.md
+  - shell.nix
+  - build.sh

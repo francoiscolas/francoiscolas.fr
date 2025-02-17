@@ -1,0 +1,21 @@
+---
+#layout: compress
+---
+<!DOCTYPE html>
+<html lang="fr">
+{% include head.html -%}
+<body>
+  <div class="wrapper">
+    <div class="sidebar">
+      {% include sidebar.html -%}
+    </div>
+    <div class="main">
+      <div class="tools">
+        <a href="{{ site.data.sidebar.pdfpath }}"><i class="fa-solid fa-download"></i></a>
+      </div>
+      {{ content }}
+    </div>
+  </div>
+</body>
+</html>
+

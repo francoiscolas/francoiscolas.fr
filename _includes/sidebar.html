@@ -1,0 +1,27 @@
+{% assign sidebar = site.data.sidebar -%}
+  <div class="profile-container">
+    {% if sidebar.avatar -%}
+    <img class="avatar" src="assets/images/{{ sidebar.avatar }}" alt="profile picture" />
+    {% endif -%}
+    {% if sidebar.name -%}
+    <h1>{{ sidebar.name }}</h1>
+    {% endif -%}
+    {% if sidebar.tagline -%}
+    <p>{{ sidebar.tagline | markdownify }}</p>
+    {% endif -%}
+  </div>
+  {% include contact.html -%}
+  {% for block in sidebar.blocks -%}
+  <div class="block">
+    <h2>{{ block.name }}</h2>
+    {% for item in block.items -%}
+    <div class="item">
+      <div class="item-title">{{ item.name }}</div>
+      {% for meta in item.meta -%}
+      <div class="item-meta">{{ meta }}</div>
+      {% endfor -%}
+    </div>
+    {% endfor -%}
+  </div>
+  {% endfor -%}
+
