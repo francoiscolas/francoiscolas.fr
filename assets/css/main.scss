@@ -1,12 +1,20 @@
 ---
 ---
 @charset "utf-8";
-@use "../../_bulma/sass/index" with (
-    $body-color: #000000,
-    $body-size: 0.9em,
-
+@use "../../_bulma/sass/utilities" with (
     $primary: #3574AC,
 );
+@use "../../_bulma/sass/themes";
+@use "../../_bulma/sass/base" with (
+    $body-color: #000000,
+    $body-size: 0.9em,
+);
+@use "../../_bulma/sass/elements/content";
+@use "../../_bulma/sass/elements/icon";
+@use "../../_bulma/sass/grid/columns";
+@use "../../_bulma/sass/layout/container";
+@use "../../_bulma/sass/layout/media";
+@use "../../_bulma/sass/helpers";
 @use "../../_bulma/sass/utilities/mixins";
 
 :root {
@@ -20,7 +28,6 @@
     --bulma-code: var(--bulma-body-color);
     --bulma-code-background: var(--main-bg);
 }
-
 
 html {
     @extend .has-background-light;
