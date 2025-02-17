@@ -1,0 +1,175 @@
+---
+---
+@charset "utf-8";
+@use "../../_bulma/sass/index" with (
+    $body-color: #000000,
+    $body-size: 0.9em,
+
+    $primary: #3574AC,
+);
+@use "../../_bulma/sass/utilities/mixins";
+
+:root {
+    --sidebar-text-color: #FFFFFF;
+    --sidebar-title-color: #FFFFFF;
+
+    --main-bg: #FFFFFF;    
+
+    --bulma-link-text: var(--bulma-primary-40);
+
+    --bulma-code: var(--bulma-body-color);
+    --bulma-code-background: var(--main-bg);
+}
+
+
+html {
+    @extend .has-background-light;
+}
+body {
+    @extend .container;
+    @extend .is-max-desktop;
+    @include mixins.desktop {
+        padding: 30px;
+    }
+}
+.wrapper {
+    @extend .columns;
+    @extend .is-gapless;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    @extend .column;
+    @extend .is-one-third;
+    @include mixins.clearfix;
+    background: var(--bulma-primary);
+    color: var(--sidebar-text-color);
+    .profile-container {
+        background: var(--bulma-primary-40);
+        text-align: center;
+        padding: 30px;
+        .avatar {
+            border: 2px solid #FFFFFF;
+            border-radius: 100%;
+            max-width: 100px;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+    .block {
+        margin: 30px;
+        h2 {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--sidebar-title-color);
+            border-bottom: 1px solid var(--sidebar-title-color);
+            margin-bottom: 20px;
+        }
+        .item {
+            margin-bottom: 10px;
+            .item-meta {
+                font-size: 0.9rem;
+                color: rgba(255, 255, 255, 0.8);
+            }
+            a {
+                color: var(--sidebar-text-color);
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.main {
+    @extend .column;
+    @include mixins.clearfix;
+    background: var(--main-bg);
+
+    position: relative;
+    .tools {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        a {
+            color: lightgrey;
+            &:hover {
+                color: var(--bulma-link-text);
+            }
+        }
+    }
+
+    .content {
+        margin: 40px;
+        &:first-of-type {
+            padding-top: 40px;
+            margin-top: 0px;
+        }
+        h2 {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: var(--bulma-primary-40);
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 10px 0;
+        }
+        .exp {
+            margin: 10px 0 20px 0;
+        }
+        .exp-meta {
+            div {
+                position: relative;
+                .exp-title {
+                    font-weight: bold;
+                }
+                .exp-time {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+            .exp-time, .exp-org {
+                color: rgba(0, 0, 0, 0.9);
+                font-size: 0.9rem;
+            }
+        }
+        ul {
+            margin-top: 0;
+        }
+    }
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+    .wrapper {
+        height: 100vh;
+    }
+    .sidebar {
+        .profile-container {
+            padding: 20px;
+        }
+        .block {
+            margin: 20px;
+        }
+    }
+    .main {
+        .tools {
+            display: none;
+        }
+        .content {
+            margin: 30px;
+            li, li+li {
+                margin: 0;
+            }
+        }
+        .career-profile {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+name: François Colas
+tagline: |
+  Freelance en développement logiciel. Disponible ASAP en présentiel ou à distance dans l'ouest
+  ou la région parisienne.
+avatar: profile.png
+
+email: pro@francoiscolas.fr
+linkedin: francolas
+github: francoiscolas
+location: Angers, France
+pdfpath: assets/cv-francois-colas.pdf
+
+blocks:
+  - name: Formation
+    items:
+      - name: Diplôme EPITECH Expert en Technologies de l'information (RNCP 7)
+        meta:
+          - EPITECH, Le Kremlin-Bicêtre (94)
+          - 2006 - 2011
+  - name: Langues
+    items:
+      - name: Anglais
+        meta:
+          - CLOE Business English B1+ en 2024
+          - TOEIC en 2011
+  - name: Mes outils favoris
+    items:
+      - name: Gentoo, Vim, VSCode, Git, VirtualBox.
+  - name: Ce que j'aime
+    items:
+      - name: |
+          Jésus, ma femme, mes enfants et randonner en montagne !<br/>
+          Aussi cuisiner, bricoler et, évidemment, écouter Janco !

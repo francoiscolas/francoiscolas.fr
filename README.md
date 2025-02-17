@@ -1,7 +1,6 @@
-# francoiscolas.fr
+# CV
 
 ```
 $ nix-shell
-$ npm install
-$ npm run build
+$ bundle exec jekyll serve -w
 ```

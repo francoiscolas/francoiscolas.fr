@@ -1,0 +1,56 @@
+<div class="block">
+  <h2>Contact</h2>
+  {% if sidebar.location -%}
+  <div class="item icon-text">
+    <span class="icon">
+      <i class="fas fa-house"></i>
+    </span>
+    {{ sidebar.location }}
+  </div>
+  {% endif -%}
+
+  {% if sidebar.email -%}
+  <div class="item icon-text">
+    <span class="icon">
+      <i class="fas fa-envelope"></i>
+    </span>
+    <a href="mailto:{{ sidebar.email }}">{{ sidebar.email }}</a>
+  </div>
+  {% endif -%}
+
+  {% if sidebar.phone -%}
+  <div class="item icon-text">
+    <span class="icon">
+      <i class="fas fa-phone"></i>
+    </span>
+    <a href="tel:{{ sidebar.phone }}">{{ sidebar.phone }}</a>
+  </div>
+  {% endif -%}
+
+  {% if sidebar.website -%}
+  <div class="item icon-text">
+    <span class="icon">
+      <i class="fas fa-globe"></i>
+    </span>
+    <a href="{{ sidebar.website }}" target="_blank">{{ sidebar.website }}</a>
+  </div>
+  {% endif -%}
+
+  {% if sidebar.linkedin -%}
+  <div class="item icon-text">
+    <span class="icon">
+      <i class="fab fa-linkedin"></i>
+    </span>
+    <a href="https://linkedin.com/in/{{ sidebar.linkedin }}" target="_blank">linkedin.com/in/{{ sidebar.linkedin }}</a>
+  </div>
+  {% endif -%}
+
+  {% if sidebar.github -%}
+  <div class="item icon-text">
+    <span class="icon">
+      <i class="fab fa-github"></i>
+    </span>
+    <a href="https://github.com/{{ sidebar.github }}" target="_blank">github.com/{{ sidebar.github }}</a>
+  </div>
+  {% endif -%}
+</div>
