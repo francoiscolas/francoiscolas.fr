@@ -11,58 +11,75 @@ career-profile:
       [La Ronde des Fruits](https://larondedesfruits.fr/), ferme qu'il était prévu
       que je reprenne.  
         
-      Les évènements m'ont poussé à laisser ce rève de côté pour retrouver ma
+      Les évènements m'ont poussé à laisser ce projet de côté pour retrouver ma
       passion première. C'est naturellement que j'ai terminé l'année à
       l'[ESEO](https://www.eseo.fr/) où j'étais vacataire depuis quelques années.  
+
       Ensuite, j'ai travaillé chez [EVOLIS](https://www.evolis.com/) où j'ai eu la
       chance de m'occuper de la refonte du SDK de la société et d'être responsable
       technique d'une équipe de 5 ingénieurs.
 
 experiences:
     title:  Expériences pro<span class="is-hidden-mobile">fessionnelles</span>
-    info:
+    list:
       - role: Team Leader
         time: Juill. 2020 à déc. 2024
         company: EVOLIS, Beaucouzé (49)
         details: |
-          - En charge de la mise en œuvre technique de la vision des SDKs.
-          - Mise en place `Gitlab CI/CD` pour 5 plateformes et 5 langages différents.
-          - Responsable technique de 5 ingénieurs logiciels.
-          - Gestion de projet via Jira.
-          - Contexte multiplateforme : `Windows, macOS, iOS, Linux, Android`.
-          - Langages : `C, C++, Rust, C#, Java, Bash`. 
-          - Technologies : `Yocto, Qt, CMake, GitLab CI/CD, Docker, REST API, Android NDK, Jira, VirtualBox, Nginx, ...`
+          En charge de la mise en œuvre technique de la vision des SDKs. Pendant
+          ces quatre années, ma mission a été, avec une équipe de 5 ingénieurs,
+          de refondre le SDK de la société pour fournir un outil fonctionnant
+          dans un maximum de contextes (5 plateformes et 5 langages) tout en
+          gardant un haut niveau de maintenabilité.  
+          Technologies : `C, C++, Rust, C#, Java, Bash, Yocto, Qt, CMake,
+          GitLab CI/CD, Docker, REST API, Android NDK, Jira, VirtualBox,
+          Nginx, Windows, macOS, iOS, Linux, Android.`
       - role: Administrateur système
         time: Mars 2020 à juin 2020
         company: ESEO, Angers (49)
         details: |
-          - Expert Linux au sein du service informatique.
-          - En charge du maintien en opération des labos.
-          - Technologies : `Ubuntu, Debian, Docker, Gitea, FOG Project, Bash, ...`
+          Expert Linux au sein du service informatique de l'école, j'étais notamment
+          responsable du maintien en opération des laboratoires et du déploiement
+          d'applications hébergées sur serveur Linux.  
+          Technologies : `Ubuntu, Debian, Docker, Gitea, FOG Project, Bash.`
       - role: Chargé de cours
         time: Sept. 2017 à juin 2020
         company: ESEO, Angers (49)
         details: |
-          - Formation des élèves de prépa et bachelor à l’algorithmie et à la programmation informatique.
-          - Utilisation de `Python` et `Java (Android)` pour la formation.
-          - Développement de mes qualités de transmission et d’écoute.
-      - role: Responsable de cultures
+          Formation des élèves de prépa et bachelor à l’algorithmie et à la programmation
+          informatique via des projets en Python et Java (Android). Ce fut l'occasion pour
+          moi de développer mes qualités de transmission et d'écoute.  
+          Technologies : `Python, Java (Android SDK).`
+      - role: Responsable des cultures
         time: Nov. 2018 à févr. 2020
-        company: Ferme "La Ronde Des Fruits", La Membrolle-sur-Longuenée (49)
+        company: La Ronde Des Fruits, La Membrolle-sur-Longuenée (49)
         details: |
-          - Gestion des travaux d’entretien, de récolte et de commercialisation.
-          - Gestion d’une équipe de saisonniers.
-      - role: Gérant
-        time: Juin 2016 à sept. 2017
-        company: Cestlocal.fr, Angers (49)
-        details: |
-          - Création et développement du site cestlocal.fr, projet permettant de faire le lien entre consommateurs et producteurs.
-          - Technologies : `Ruby On Rails, Foundation Framework, Backbone, Docker, Chef, Javascript, CSS`.
+          _La Ronde Des Fruits_ est une ferme de production fruitière en agriculture biologique.
+          J'étais responsable des travaux d'entretien, de récolte et de commercialisation des
+          petits fruits (fraises, framboises, etc). Mon rôle était également de m'occuper des
+          saisonniers.
       - role: Ingénieur logiciel
         time: Févr. 2008 à juin 2016
         company: Camtrace SAS, Suresnes (92)
         details: |
-          - Développement fullstack : `PHP, Javascript`.
-          - Développement système : Serveur vidéo en `C` puis refonte en `C++`.
-          - Développement application bureautiques et applications mobiles.
-          - Technologies : `Qt, Boost, Cordova, Android NDK`.
+          Camtrace est un serveur de vidéo-surveillance. Au cours des années ma mission a
+          beaucoup évolué. J'ai commencé par travailler sur l'interface web qui était à ce
+          moment la seule interface disponible pour paramétrer et utiliser le serveur, afficher les
+          flux vidéo, etc. Ensuite j'ai travaillé sur le backend en C++. Puis j'ai travaillé à la
+          création d'applications pour Android et iOS. Enfin les 4 dernières années j’ai travaillé à la
+          création d’un nouveau client en C++/Qt fonctionnant sous Windows, Mac et Linux. Ce
+          client était destiné à compléter l'interface web qui était incapable de
+          répondre à de très grosses montés en charge.  
+          Technologies : `PHP, Javascript, CSS, C++, Qt, Boost, Cordova, iOS, Android SDK et NDK.`
+
+side-projects:
+  title: Projets personnels
+  list:
+    - name: Cestlocal.fr
+      link:
+      details: |
+        De 2016 à 2017, pendant ma formation à l'[ESA](https://www.groupe-esa.com/),
+        j'ai créé un site, _cestlocal.fr_, pour permettre de faire le lien entre
+        consommateurs et producteurs. L'objectif était de fournir un outil pour
+        aider les producteurs à vendre leur production.  
+        Technologies : `Ruby On Rails, Foundation Framework, Backbone, Docker, Chef, Javascript, CSS.`

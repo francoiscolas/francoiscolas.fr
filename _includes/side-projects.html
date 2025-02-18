@@ -1,0 +1,26 @@
+{% assign projects = site.data.data.side-projects -%}
+{% if projects -%}
+<section class="content">
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-archive fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ projects.title }}
+  </h2>
+  {% for project in projects.list -%}
+  <div class="exp">
+    <div class="exp-meta">
+      <div>
+        <span class="exp-title">{{ project.name }}</span>
+        {% if project.link -%}
+        - <a href="{{ project.link }}">{{ project.link }}</a>
+        {% endif -%}
+       </div>
+    </div>
+    {{ project.details | markdownify }}
+  </div>
+  {% endfor -%}
+</section>
+{% endif -%}
+
